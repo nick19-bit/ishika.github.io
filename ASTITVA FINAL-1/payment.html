@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+  <title>Riverstone - Payment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Riverstone</div>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="booking.html">Booking</a>
+      <a href="delivery.html">Delivery</a>
+      <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+      <a href="payment.html" class="active">Payment</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="help.html">Help</a>
+      <a href="#" id="signinBtn">Sign In</a>
+    </div>
+  </nav>
+</header>
+
+<main class="card" id="paymentSection">
+  <h2>Payment</h2>
+  <form id="paymentForm">
+    <label><input type="radio" name="method" value="card" required> Card</label>
+    <label><input type="radio" name="method" value="upi"> UPI</label>
+    <label><input type="radio" name="method" value="cash"> Cash</label>
+
+    <!-- Card Fields -->
+    <div id="cardFields" class="hidden">
+      <input type="text" placeholder="Cardholder Name" required>
+      <input type="text" placeholder="Card Number" maxlength="16" required>
+      <input type="month" required>
+      <input type="password" maxlength="3" placeholder="CVV" required>
+    </div>
+
+    <!-- UPI Box -->
+    <div id="upiBox" class="hidden">
+      <p>Scan QR to pay:</p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=riverstone@upi" alt="UPI QR">
+      <div id="upiTimer" class="timer-display"></div>
+    </div>
+
+    <button type="submit">Pay</button>
+  </form>
+  <div id="miniSummary"></div>
+</main>
+
+<!-- Success Section -->
+<section class="card hidden" id="successSection">
+  <h2>✅ Payment Successful</h2>
+  <div id="receipt"></div>
+  <a href="index.html"><button>Home</button></a>
+</section>
+
+<!-- Pop-up for Payment Received -->
+<form id="paymentForm">
+  <label><input type="radio" name="method" value="card"> Card</label>
+  <label><input type="radio" name="method" value="upi"> UPI</label>
+  <label><input type="radio" name="method" value="cash"> Cash</label>
+
+  <div id="cardFields" class="hidden">
+    <input type="text" placeholder="Card Number">
+    <input type="text" placeholder="Expiry">
+    <input type="text" placeholder="CVV">
+  </div>
+
+  <div id="upiBox" class="hidden">
+    <p>Scan this QR to pay</p>
+    <img src="upi-qr.png" alt="UPI QR" width="200">
+    <p id="upiTimer"></p>
+  </div>
+
+  <button type="submit">Pay Now</button>
+</form>
+
+
+<footer>
+  <p>&copy; 2025 Riverstone • Fresh • Local • Delicious</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
