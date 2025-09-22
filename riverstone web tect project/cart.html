@@ -1,0 +1,43 @@
+
+<!doctype html>
+<html>
+<head>
+  <title>Riverstone - Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Riverstone</div>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="booking.html">Booking</a>
+      <a href="delivery.html">Delivery</a>
+      <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+      <a href="payment.html">Payment</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="help.html">Help</a>
+      <a href="#" id="signinBtn">Sign In</a>
+    </div>
+  </nav>
+</header>
+
+<main class="card">
+  <h2>Your Cart</h2>
+  <div id="cartItems"></div>
+  <div id="cartTotals"></div>
+  <button onclick="clearCart()">Clear Cart</button>
+  <a href="payment.html"><button>Proceed to Payment</button></a>
+</main>
+
+<footer>
+  <p>&copy; 2025 Riverstone • Fresh • Local • Delicious</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

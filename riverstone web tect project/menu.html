@@ -1,0 +1,55 @@
+
+<!doctype html>
+<html>
+<head>
+  <title>Riverstone - Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Riverstone</div>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="booking.html">Booking</a>
+      <a href="delivery.html">Delivery</a>
+      <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+      <a href="payment.html">Payment</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="help.html">Help</a>
+      <a href="#" id="signinBtn">Sign In</a>
+    </div>
+  </nav>
+</header>
+
+<main class="card">
+  <h2>Riverstone Menu</h2>
+  <table>
+    <tr><td>Grilled Salmon</td><td>₹350</td><td><button onclick="addToCart('Grilled Salmon',350)">Add</button></td></tr>
+    <tr><td>Prawn Curry</td><td>₹250</td><td><button onclick="addToCart('Prawn Curry',250)">Add</button></td></tr>
+    <tr><td>Lobster Bisque</td><td>₹400</td><td><button onclick="addToCart('Lobster Bisque',400)">Add</button></td></tr>
+    <tr><td>Paella</td><td>₹250</td><td><button onclick="addToCart('Paella',250)">Add</button></td></tr>
+    <tr><td>Ceviche</td><td>₹550</td><td><button onclick="addToCart('Ceviche',550)">Add</button></td></tr>
+    <tr><td>Garlic butter shrimp</td><td>₹500</td><td><button onclick="addToCart('Garlic butter shrimp',500)">Add</button></td></tr>
+    <tr><td>Catfish</td><td>₹250</td><td><button onclick="addToCart('Catfish',250)">Add</button></td></tr>
+    <tr><td>Oyesters</td><td>₹250</td><td><button onclick="addToCart('Oyesters',250)">Add</button></td></tr>
+    <tr><td>Fish & Chips</td><td>₹150</td><td><button onclick="addToCart('Fish & Chips',150)">Add</button></td></tr>
+    <tr><td>Crab Cake bites</td><td>₹350</td><td><button onclick="addToCart('Crab Cake bites',3500)">Add</button></td></tr>
+    <tr><td>Mackerel</td><td>₹250</td><td><button onclick="addToCart('Mackerel',250)">Add</button></td></tr>
+    <tr><td>Sardines</td><td>₹350</td><td><button onclick="addToCart('Sardines',350)">Add</button></td></tr>
+    <tr><td>Japanese Tuna Cuts</td><td>₹450</td><td><button onclick="addToCart('Japanese Tuna Cuts',450)">Add</button></td></tr>
+    <tr><td>Sushi</td><td>₹400</td><td><button onclick="addToCart('Sushi',400)">Add</button></td></tr>
+  </table>
+</main>
+
+<footer>
+  <p>&copy; 2025 Riverstone • Fresh • Local • Delicious</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
